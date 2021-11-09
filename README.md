@@ -48,7 +48,7 @@ A API possuí <b>17 endpoints</b>, que são divididos em 3 categorias:
 </ul>
 </br>
 
-**baseUrl**: www.esperandofazeropushnoheroku.com
+**baseUrl**: https://tasks-gamefication-api.herokuapp.com
 
 ## 👤 User
 
