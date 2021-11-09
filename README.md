@@ -416,7 +416,7 @@ Necessita de autenticação: **Bearer: token**
 ]
 ```
 
-`POST /quests/ - FORMATO DE SAÍDA - 200`
+`POST /comments - FORMATO DE SAÍDA - 200`
 
 ```json
 [
