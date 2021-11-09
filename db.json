@@ -1,0 +1,60 @@
+{
+  "users": [
+    {
+      "email": "madu@mail.com",
+      "password": "$2a$10$eJyGYZ0aedKPnF8MUp8ttu7IkFyyElopV53L9Qnnlq4i0j8pOnEkS",
+      "firstName": "madu",
+      "lastName": "Rubini",
+      "id": 1
+    },
+    {
+      "email": "will@mail.com",
+      "password": "$2a$10$Ecedz2qVjBxR2rAYn667OukJpX3CeMjPbqby6ZHADBWMMjtDT5i4e",
+      "firstName": "will",
+      "lastName": "Santos",
+      "id": 2
+    }
+  ],
+  "tasks": [
+    {
+      "title": "Lavar a Louça",
+      "difficulty": "Easy",
+      "xp": 0,
+      "finished": false,
+      "userId": 2,
+      "id": 1
+    },
+    {
+      "title": "Comprar a comida da semana",
+      "difficulty": "Easy",
+      "xp": 0,
+      "finished": false,
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "title": "Lavar Louça",
+      "difficulty": "Easy",
+      "xp": 0,
+      "finished": false,
+      "userId": 1,
+      "id": 3
+    }
+  ],
+  "quests": [
+    {
+      "body": "Como saber o dia de amanhã?",
+      "likes": 2,
+      "userId": 1,
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "comment": "O ideal é ter um multimetro em mãos para essa operação",
+      "questId": 2,
+      "userId": 1,
+      "id": 1
+    }
+  ]
+}
