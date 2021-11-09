@@ -127,7 +127,7 @@ Este endpoint é para cadastrar os usuários que ainda não estão previamente c
 Este endpoint é para exibir as perguntas do usuário cadastrado. Neste caso no corpo da requisição passamos o userId da pessoa logada.
 <br>Necessita de autenticação: **Bearer: token**
 
-`GET /users/{questId}/quests - FORMATO DE SAÍDA:`
+`GET /users/{userId}/quests - FORMATO DE SAÍDA:`
 
 ```json
 [
@@ -145,7 +145,7 @@ Este endpoint é para exibir as perguntas do usuário cadastrado. Neste caso no 
 Este endpoint é para exibir os comentários do usuário cadastrado. Neste caso no corpo da requisição passamos o userId da pessoa logada e o questId da pergunta escolhida.
 <br>Necessita de autenticação: **Bearer: token**
 
-`GET /users/{questId}/comments - FORMATO DE SAÍDA:`
+`GET /users/{userId}/comments - FORMATO DE SAÍDA:`
 
 ```json
 [
