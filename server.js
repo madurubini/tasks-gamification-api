@@ -13,6 +13,10 @@ const rules = auth.rewriter({
   tasks: 600,
   quests: 664,
   comments: 664,
+  badges: 660,
+  levels: 660,
+  allBadges: 664,
+  allLevels: 664,
 });
 
 app.use(cors());

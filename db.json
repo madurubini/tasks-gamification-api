@@ -5,6 +5,7 @@
       "password": "$2a$10$eJyGYZ0aedKPnF8MUp8ttu7IkFyyElopV53L9Qnnlq4i0j8pOnEkS",
       "firstName": "madu",
       "lastName": "Rubini",
+      "xp": 0,
       "id": 1
     },
     {
@@ -12,6 +13,7 @@
       "password": "$2a$10$Ecedz2qVjBxR2rAYn667OukJpX3CeMjPbqby6ZHADBWMMjtDT5i4e",
       "firstName": "will",
       "lastName": "Santos",
+      "xp": 0,
       "id": 2
     }
   ],
@@ -53,6 +55,165 @@
     {
       "comment": "O ideal é ter um multimetro em mãos para essa operação",
       "questId": 2,
+      "userId": 1,
+      "id": 1
+    }
+  ],
+  "badges": [
+    {
+      "title": "Novo no pedaço",
+      "img": "https://picsum.photos/200",
+      "description": "Você fez seu primeiro login!",
+      "BadgeId": 1,
+      "status": false
+    },
+    {
+      "title": "Questionad@r",
+      "img": "https://picsum.photos/200",
+      "description": "Você fez sua primeira pergunta na comunidade!",
+      "BadgeId": 2,
+      "status": false
+    },
+    {
+      "title": "Parceir@",
+      "img": "https://picsum.photos/200",
+      "description": "Você fez seu primeiro comentário em uma pergunta!",
+      "BadgeId": 3,
+      "status": false
+    },
+    {
+      "title": "Começo da trilha...",
+      "img": "https://picsum.photos/200",
+      "description": "Você não é mais noob, bem-vindo ao nível 1",
+      "BadgeId": 4,
+      "status": false
+    },
+    {
+      "title": "Pausa para água",
+      "img": "https://picsum.photos/200",
+      "description": "Hora de respirar, você chegou no nível 5!",
+      "BadgeId": 5,
+      "status": false
+    },
+    {
+      "title": "Foguete não tem ré",
+      "img": "https://picsum.photos/200",
+      "description": "Parabéns você chegou no nível 10, hora de descansar!",
+      "BadgeId": 6,
+      "status": false
+    },
+    {
+      "title": "Voz da Comunidade",
+      "img": "https://picsum.photos/200",
+      "description": "Você fez +5 perguntas na comunidade",
+      "BadgeId": 7,
+      "status": false
+    },
+    {
+      "title": "Fofoqueir@",
+      "img": "https://picsum.photos/200",
+      "description": "Você fez +5 comentários",
+      "BadgeId": 8,
+      "status": false
+    }
+  ],
+  "levels": [
+    {
+      "title": "Noob",
+      "reqXp": 0,
+      "level": 0,
+      "LevelId": 1,
+      "status": false
+    },
+    {
+      "title": "Ferro",
+      "reqXp": 10,
+      "level": 1,
+      "LevelId": 2,
+      "status": false
+    },
+    {
+      "title": "Bronze",
+      "reqXp": 30,
+      "level": 2,
+      "LevelId": 3,
+      "status": false
+    },
+    {
+      "title": "Prata",
+      "reqXp": 60,
+      "level": 3,
+      "LevelId": 4,
+      "status": false
+    },
+    {
+      "title": "Ouro",
+      "reqXp": 100,
+      "level": 4,
+      "LevelId": 5,
+      "status": false
+    },
+    {
+      "title": "Platina",
+      "reqXp": 150,
+      "level": 5,
+      "LevelId": 6,
+      "status": false
+    },
+    {
+      "title": "Diamante",
+      "reqXp": 200,
+      "level": 6,
+      "LevelId": 7,
+      "status": false
+    },
+    {
+      "title": "Mestre",
+      "reqXp": 260,
+      "level": 7,
+      "LevelId": 8,
+      "status": false
+    },
+    {
+      "title": "Gran-Mestre",
+      "reqXp": 330,
+      "level": 8,
+      "LevelId": 9,
+      "status": false
+    },
+    {
+      "title": "Desafiante",
+      "reqXp": 400,
+      "level": 9,
+      "LevelId": 10,
+      "status": false
+    },
+    {
+      "title": "Pró-Player",
+      "reqXp": 500,
+      "level": 10,
+      "LevelId": 11,
+      "status": false
+    }
+  ],
+  "allBadges": [
+    {
+      "title": "Novo no pedaço",
+      "img": "https://picsum.photos/200",
+      "description": "Você fez seu primeiro login!",
+      "BadgeId": 1,
+      "status": true,
+      "userId": 1,
+      "id": 1
+    }
+  ],
+  "allLevels": [
+    {
+      "title": "Bronze",
+      "reqXp": 30,
+      "level": 2,
+      "LevelId": 3,
+      "status": false,
       "userId": 1,
       "id": 1
     }
