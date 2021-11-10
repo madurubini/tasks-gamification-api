@@ -48,7 +48,7 @@ A API possuí <b>17 endpoints</b>, que são divididos em 3 categorias:
 </ul>
 </br>
 
-**baseUrl**: www.esperandofazeropushnoheroku.com
+**baseUrl**: https://tasks-gamefication-api.herokuapp.com
 
 ## 👤 User
 
@@ -124,12 +124,10 @@ Este endpoint é para cadastrar os usuários que ainda não estão previamente c
 
 ### <span>❓</span> User Quests
 
-POST /register <br/>
-
 Este endpoint é para exibir as perguntas do usuário cadastrado. Neste caso no corpo da requisição passamos o userId da pessoa logada.
 <br>Necessita de autenticação: **Bearer: token**
 
-`GET /users/{questId}/quests - FORMATO DE SAÍDA:`
+`GET /users/{userId}/quests - FORMATO DE SAÍDA:`
 
 ```json
 [
@@ -144,12 +142,10 @@ Este endpoint é para exibir as perguntas do usuário cadastrado. Neste caso no 
 
 ### <span>💬</span> User Comments
 
-POST /register <br/>
-
 Este endpoint é para exibir os comentários do usuário cadastrado. Neste caso no corpo da requisição passamos o userId da pessoa logada e o questId da pergunta escolhida.
 <br>Necessita de autenticação: **Bearer: token**
 
-`GET /users/{questId}/comments - FORMATO DE SAÍDA:`
+`GET /users/{userId}/comments - FORMATO DE SAÍDA:`
 
 ```json
 [
@@ -266,7 +262,7 @@ Necessita de autenticação: **Bearer: token**
 
 ## <span>👥</span> Fórum
 
-### ?Quests?
+### ? Quests
 
 Esta rota é livre para todos os usuários visualizarem, porém apenas os usuários logados podem interagir na aplicação, como comentar e perguntar no fórum.
 
@@ -420,7 +416,7 @@ Necessita de autenticação: **Bearer: token**
 ]
 ```
 
-`POST /quests/ - FORMATO DE SAÍDA - 200`
+`POST /comments - FORMATO DE SAÍDA - 200`
 
 ```json
 [
