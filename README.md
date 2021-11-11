@@ -772,7 +772,7 @@ Necessita de autenticação: **Bearer: token**
 ]
 ```
 
-### Add a level to User
+### Add a badge to User
 
 Este endpoint é reservado para adicionar uma conquista para o usuário cadastrado. Desta forma vamos passar no corpo da requisição o objeto referente a conquista à ser adicionada, passando também o userId do usuário desejado.<br>
 Necessita de autenticação: **Bearer: token**
