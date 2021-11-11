@@ -1,10 +1,10 @@
 # <span>📝</span> task-gamefication-api
 
-Esse repositório compreende a API task-gamefication-api, que tem como objetivo auxiliar o usuário que está começando a jornada de morar sozinho. Neste caso ajudando na organização de suas tarefas e contando com um fórum para realizar seus questionamentos com a comunidade.
+Esse repositório compreende a API task-gamefication-api, que tem como objetivo auxiliar o usuário que está começando a jornada de morar sozinho. Neste caso ajudando na organização de suas tarefas e contando com um comunidade para realizar seus questionamentos.
 
 ## Endpoints
 
-A API possuí <b>17 endpoints</b>, que são divididos em 3 categorias:
+A API possuí <b>27 endpoints</b>, que são divididos em 5 categorias:
 
 <ul>
 <h3><b>Users Requests</b></h3>
@@ -12,7 +12,10 @@ A API possuí <b>17 endpoints</b>, que são divididos em 3 categorias:
 <li>Realizar o cadastro do usuário, caso o mesmo ainda não o tenha</li>
 <li>Logar na aplicação, caso o mesmo já seja cadastrado</li>
 <li>Exibir as perguntas que o usuário realizou</li>
-<li>Exibir o histórico de comentários que ele fez nas perguntas do fórum</li>
+<li>Exibir o histórico de comentários que ele fez nas perguntas da comunidade</li>
+<li>Exibir o nível atual do usuário</li>
+<li>Exibir as conquistas do usuário</li>
+<li>Atualizar os pontos de XP do usuário</li>
 </ul>
 
 </br>
@@ -29,8 +32,8 @@ A API possuí <b>17 endpoints</b>, que são divididos em 3 categorias:
 </br>
 
 <ul>
-<h3><b>Fórum Requests</b></h3>
-<p>Esta pasta guarda todos os endpoints relacionados as perguntas que o usuário faz no fórum e a interação de comentários. Desta forma ele é dividido em 2 subpastas <b>Comments e Quests</b>. </p>
+<h3><b>Community Requests</b></h3>
+<p>Esta pasta guarda todos os endpoints relacionados as perguntas que o usuário faz no comunidade e a interação de comentários. Desta forma ele é dividido em 2 subpastas <b>Comments e Quests</b>. </p>
  
 <h4><b>Quests</b></h4>
 <li>Exibir todas as perguntas</li>
@@ -47,6 +50,23 @@ A API possuí <b>17 endpoints</b>, que são divididos em 3 categorias:
 
 </ul>
 </br>
+<ul>
+<h3><b>Levels Requests</b></h3>
+<p>Esta pasta guarda todos os endpoints relacionados ao Level, desta forma é possível:</p>
+<li>Consultar a biblioteca de níveis</li>
+<li>Verificar os níveis de todos os usuários</li>
+<li>Atualizar o nível de um usuário</li>
+<li>Adicionar o primeiro nível para o usuário</li>
+</ul>
+</br>
+<ul>
+<h3><b>Badges Requests</b></h3>
+<p>Esta pasta guarda todos os endpoints relacionados as Badges, desta forma é possível:</p>
+<li>Adicionar badges no perfil do usuário</li>
+<li>Verificar as badges de todos os usuários</li>
+<li>Consultar biblioteca de badges</li>
+</ul>
+<br>
 
 **baseUrl**: https://tasks-gamefication-api.herokuapp.com
 
@@ -76,11 +96,12 @@ Este endpoint é reservado para realizar o login do usuário previamente cadastr
 ```json
 [
   {
-    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZHVAbWFpbC5jb20iLCJpYXQiOjE2MzY0Mjk4MzksImV4cCI6MTYzNjQzMzQzOSwic3ViIjoiMSJ9.eKnTns3R4-dYjlVBkaQtKCrMEh2XmXS9tQB9snwwFOQ",
+    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZHVAbWFpbC5jb20iLCJpYXQiOjE2MzY1OTY2MzksImV4cCI6MTYzNjYwMDIzOSwic3ViIjoiMSJ9.wjwMrYOlDp6cUa7CiFaBt_7ZM9d-bxJt_Fk9-i5fMLc",
     "user": {
       "email": "madu@mail.com",
       "firstName": "madu",
       "lastName": "Rubini",
+      "xp": 0,
       "id": 1
     }
   }
@@ -98,10 +119,11 @@ Este endpoint é para cadastrar os usuários que ainda não estão previamente c
 ```json
 [
   {
-    "firstName": "Madu",
-    "lastName": "Rubini",
-    "email": "madu@mail.com",
-    "password": "123456"
+    "firstName": "duda",
+    "lastName": "Santos",
+    "email": "duda@mail.com",
+    "password": "123456",
+    "xp": 0
   }
 ]
 ```
@@ -111,12 +133,13 @@ Este endpoint é para cadastrar os usuários que ainda não estão previamente c
 ```json
 [
   {
-    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZHVAbWFpbC5jb20iLCJpYXQiOjE2MzY0MTQyODEsImV4cCI6MTYzNjQxNzg4MSwic3ViIjoiMSJ9.TbIQO0V8NbGDw_HNx1VE-1xDes_M39Q-iedV4P6DdHY",
+    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImR1ZGFAbWFpbC5jb20iLCJpYXQiOjE2MzY1OTkzMDEsImV4cCI6MTYzNjYwMjkwMSwic3ViIjoiMyJ9.02pHBrMjBIg0ga4K65cg4BZZXUWXYRK4ylpnV6AK-ao",
     "user": {
-      "email": "madu@mail.com",
-      "firstName": "madu",
-      "lastName": "Rubini",
-      "id": 1
+      "email": "duda@mail.com",
+      "firstName": "duda",
+      "lastName": "Santos",
+      "xp": 0,
+      "id": 3
     }
   }
 ]
@@ -124,7 +147,7 @@ Este endpoint é para cadastrar os usuários que ainda não estão previamente c
 
 ### <span>❓</span> User Quests
 
-Este endpoint é para exibir as perguntas do usuário cadastrado. Neste caso no corpo da requisição passamos o userId da pessoa logada.
+Este endpoint é para exibir as perguntas do usuário cadastrado. Neste caso na url da requisição passamos o userId da pessoa logada.
 <br>Necessita de autenticação: **Bearer: token**
 
 `GET /users/{userId}/quests - FORMATO DE SAÍDA:`
@@ -142,7 +165,7 @@ Este endpoint é para exibir as perguntas do usuário cadastrado. Neste caso no 
 
 ### <span>💬</span> User Comments
 
-Este endpoint é para exibir os comentários do usuário cadastrado. Neste caso no corpo da requisição passamos o userId da pessoa logada e o questId da pergunta escolhida.
+Este endpoint é para exibir os comentários do usuário cadastrado. Neste caso na url da requisição passamos o userId da pessoa logada e o questId da pergunta escolhida.
 <br>Necessita de autenticação: **Bearer: token**
 
 `GET /users/{userId}/comments - FORMATO DE SAÍDA:`
@@ -154,6 +177,88 @@ Este endpoint é para exibir os comentários do usuário cadastrado. Neste caso 
     "questId": 2,
     "userId": 1,
     "id": 1
+  }
+]
+```
+
+### **Get User Level**
+
+Este endpoint é para exibir o nível do usuário cadastrado. Neste caso no corpo da requisição passamos o userId da pessoa logada.
+<br>Necessita de autenticação: **Bearer: token**
+
+`GET /users/{userId}/allLevels - FORMATO DE SAÍDA:`
+
+```json
+[
+  {
+    "title": "Bronze",
+    "reqXp": 30,
+    "level": 2,
+    "LevelId": 3,
+    "status": false,
+    "userId": 1,
+    "id": 1
+  }
+]
+```
+
+### **Udpate user XP**
+
+Este endpoint é para atualizar o XP do usuário conforme ele conclua uma tarefa.
+Na URL passamos o usuário que queremos atualizar a pontuação e no corpo da requisição o parâmetro que queremos atualizar.
+<br>Necessita de autenticação: **Bearer: token**
+
+`PATCH /users/{userId}- FORMATO DE ENTRADA:`
+
+```json
+[
+  {
+    "xp": 30
+  }
+]
+```
+
+`PATCH /users/{userId} - FORMATO DE SAÍDA:`
+
+```json
+[
+  {
+    "email": "madu@mail.com",
+    "password": "$2a$10$eJyGYZ0aedKPnF8MUp8ttu7IkFyyElopV53L9Qnnlq4i0j8pOnEkS",
+    "firstName": "madu",
+    "lastName": "Rubini",
+    "xp": 30,
+    "id": 1
+  }
+]
+```
+
+### **Get User Badges**
+
+Este endpoint é para exibir as conquistas do usuário cadastrado. Neste caso no corpo da requisição passamos o userId da pessoa logada.
+<br>Necessita de autenticação: **Bearer: token**
+
+`GET /users/{userId}/allBadges - FORMATO DE SAÍDA:`
+
+```json
+[
+  {
+    "title": "Novo no pedaço",
+    "img": "https://picsum.photos/200",
+    "description": "Você fez seu primeiro login!",
+    "BadgeId": 1,
+    "status": true,
+    "userId": 1,
+    "id": 1
+  },
+  {
+    "title": "Questionad@r",
+    "img": "https://picsum.photos/200",
+    "description": "Você fez sua primeira pergunta na comunidade!",
+    "BadgeId": 2,
+    "status": true,
+    "userId": 1,
+    "id": 2
   }
 ]
 ```
@@ -260,11 +365,11 @@ Necessita de autenticação: **Bearer: token**
 
 </br>
 
-## <span>👥</span> Fórum
+## <span>👥</span> comunidade
 
 ### ? Quests
 
-Esta rota é livre para todos os usuários visualizarem, porém apenas os usuários logados podem interagir na aplicação, como comentar e perguntar no fórum.
+Esta rota é livre para todos os usuários visualizarem, porém apenas os usuários logados podem interagir na aplicação, como comentar e perguntar no comunidade.
 
 `GET /quests/ - FORMATO DE SAÍDA - 200`
 
@@ -468,3 +573,237 @@ Necessita de autenticação: **Bearer: token**
 ```
 
 <br>
+
+## Levels
+
+<br>
+
+### Get Levels Lib
+
+Para consultar a biblioteca de níveis é necessário apenas estar logado na aplicação.
+Necessita de autenticação: **Bearer: token**
+
+`GET /levels - FORMATO DE SAÍDA - 200`
+
+```json
+[
+  {
+    "title": "Noob",
+    "reqXp": 0,
+    "level": 0,
+    "LevelId": 1,
+    "status": false
+  },
+  {
+    "title": "Ferro",
+    "reqXp": 10,
+    "level": 1,
+    "LevelId": 2,
+    "status": false
+  },
+  {
+    "title": "Bronze",
+    "reqXp": 30,
+    "level": 2,
+    "LevelId": 3,
+    "status": false
+  }
+]...
+```
+
+### Get AllLevels Activity
+
+Este endpoint é reservado para exibir os níveis de todos os usuários da aplicação.
+Necessita de autenticação: **Bearer: token**
+
+`GET /allLevels - FORMATO DE SAÍDA - 200`
+
+```json
+[
+  {
+    "title": "Bronze",
+    "reqXp": 30,
+    "level": 2,
+    "LevelId": 3,
+    "status": false,
+    "userId": 1,
+    "id": 1
+  }
+]
+```
+
+### Add a level to User
+
+Este endpoint é reservado para adicionar um nível para o usuário cadastrado. Desta forma vamos passar no corpo da requisição o objeto referente o nível à ser adicionado, passando também o userId do usuário desejado.<br>
+Necessita de autenticação: **Bearer: token**
+
+`POST /allLevels - FORMATO DE ENTRADA - 200`
+
+```json
+[
+  {
+    "title": "Noob",
+    "reqXp": 0,
+    "level": 0,
+    "LevelId": 1,
+    "status": false,
+    "userId": 1
+  }
+]
+```
+
+`POST /allLevels - FORMATO DE SAÍDA - 200`
+
+```json
+[
+  {
+    "title": "Noob",
+    "reqXp": 0,
+    "level": 0,
+    "LevelId": 1,
+    "status": false,
+    "userId": 1,
+    "id": 1
+  }
+]
+```
+
+### Update a level
+
+Este endpoint é reservado para atualizar um nível para o usuário conforme sua evolução nos pontos de XP. Desta forma vamos passar no corpo da requisição o objeto referente o nível à ser atualizado. Passando como parametro na URL o id do nível a ser atualizado<br>
+Necessita de autenticação: **Bearer: token**
+
+`PATCH /allLevels/{userLevelId} - FORMATO DE ENTRADA - 200`
+
+```json
+[
+  {
+    "title": "Bronze",
+    "reqXp": 30,
+    "level": 2,
+    "LevelId": 3,
+    "status": false
+  }
+]
+```
+
+`PATCH /allLevels/{userLevelId} - FORMATO DE SAÍDA - 200`
+
+```json
+[
+  {
+    "title": "Bronze",
+    "reqXp": 30,
+    "level": 2,
+    "LevelId": 3,
+    "status": false,
+    "userId": 1,
+    "id": 1
+  }
+]
+```
+
+<br>
+
+## Badges
+
+<br>
+
+### Get Badges Lib
+
+Para consultar a biblioteca de conquistas é necessário apenas estar logado na aplicação.
+Necessita de autenticação: **Bearer: token**
+
+`GET /badges - FORMATO DE SAÍDA - 200`
+
+```json
+[
+ {
+    "title": "Novo no pedaço",
+    "img": "https://picsum.photos/200",
+    "description": "Você fez seu primeiro login!",
+    "BadgeId": 1,
+    "status": false
+  },
+  {
+    "title": "Questionad@r",
+    "img": "https://picsum.photos/200",
+    "description": "Você fez sua primeira pergunta na comunidade!",
+    "BadgeId": 2,
+    "status": false
+  },
+  {
+    "title": "Parceir@",
+    "img": "https://picsum.photos/200",
+    "description": "Você fez seu primeiro comentário em uma pergunta!",
+    "BadgeId": 3,
+    "status": false
+  }
+]...
+```
+
+### Get AllBadges Activity
+
+Este endpoint é reservado para exibir os níveis de todos os usuários da aplicação.
+Necessita de autenticação: **Bearer: token**
+
+`GET /allBadges - FORMATO DE SAÍDA - 200`
+
+```json
+[
+  {
+    "title": "Novo no pedaço",
+    "img": "https://picsum.photos/200",
+    "description": "Você fez seu primeiro login!",
+    "BadgeId": 1,
+    "status": true,
+    "userId": 1,
+    "id": 1
+  },
+  {
+    "title": "Questionad@r",
+    "img": "https://picsum.photos/200",
+    "description": "Você fez sua primeira pergunta na comunidade!",
+    "BadgeId": 2,
+    "status": true,
+    "userId": 1,
+    "id": 2
+  }
+]
+```
+
+### Add a level to User
+
+Este endpoint é reservado para adicionar uma conquista para o usuário cadastrado. Desta forma vamos passar no corpo da requisição o objeto referente a conquista à ser adicionada, passando também o userId do usuário desejado.<br>
+Necessita de autenticação: **Bearer: token**
+
+`POST /allBadges - FORMATO DE ENTRADA - 200`
+
+```json
+[
+  {
+    "title": "Questionad@r",
+    "img": "https://picsum.photos/200",
+    "description": "Você fez sua primeira pergunta na comunidade!",
+    "BadgeId": 2,
+    "status": true,
+    "userId": 1
+  }
+]
+```
+
+`POST /allBadges - FORMATO DE SAÍDA - 200`
+
+```json
+[
+  {
+    "title": "Questionad@r",
+    "img": "https://picsum.photos/200",
+    "description": "Você fez sua primeira pergunta na comunidade!",
+    "BadgeId": 2,
+    "status": true,
+    "userId": 1,
+    "id": 2
+  }
+]
+```
