@@ -196,17 +196,7 @@
       "status": false
     }
   ],
-  "allBadges": [
-    {
-      "title": "Novo no pedaço",
-      "img": "https://picsum.photos/200",
-      "description": "Você fez seu primeiro login!",
-      "BadgeId": 1,
-      "status": true,
-      "userId": 1,
-      "id": 1
-    }
-  ],
+  "allBadges": [],
   "allLevels": [
     {
       "title": "Bronze",
