@@ -29,7 +29,7 @@
     {
       "title": "Comprar a comida da semana",
       "difficulty": "Easy",
-      "xp": 0,
+      "xp": 1,
       "finished": false,
       "userId": 1,
       "id": 2
@@ -37,7 +37,7 @@
     {
       "title": "Lavar Louça",
       "difficulty": "Easy",
-      "xp": 0,
+      "xp": 1,
       "finished": false,
       "userId": 1,
       "id": 3
